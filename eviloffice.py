@@ -102,8 +102,8 @@ def wordMacro(filepath, lhost, lport):
     path = os.path.dirname(_file)
 
     # set file paths and macro name accordingly - here we assume that the files are located in the same folder as the Python script
-    pathToWordFile = path + '/' + filepath
-    pathToMacro = path + '/macroW.vba'
+    pathToWordFile = path + os.sep + filepath
+    pathToMacro = path + os.sep + 'macroW.vba'
 
     # read the textfile holding the Word macro into a string
     with open(pathToMacro, "r") as myfile:
