@@ -102,7 +102,7 @@ def wordMacro(filepath, lhost, lport):
     path = os.path.dirname(_file)
 
     # set file paths and macro name accordingly - here we assume that the files are located in the same folder as the Python script
-    pathToWordFile = path + os.sep + filepath
+    pathToWordFile = filepath
     pathToMacro = path + os.sep + 'macroW.vba'
 
     # read the textfile holding the Word macro into a string
@@ -192,7 +192,7 @@ def wordDDE(filepath, lhost, lport):
     _file = os.path.abspath(sys.argv[0])
     path = os.path.dirname(_file)
     # set file paths and macro name accordingly - here we assume that the files are located in the same folder as the Python script
-    pathToWordFile = path + '/' + filepath
+    pathToWordFile = path + os.sep + filepath
 
     print("\033[1;77m[+] Include DDE attack...\033[0m")
     # Get command line
